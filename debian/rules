@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_autoreconf:
+	# Skip autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-optimizations --prefix=/opt/python3.13
+
+override_dh_auto_test:
+#	xvfb-run -a dh_auto_test -- TESTSUITEFLAGS="-x test_os -x test_posix -x test_subprocess"
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp

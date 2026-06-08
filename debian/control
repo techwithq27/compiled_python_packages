@@ -1,0 +1,12 @@
+Source: python3.13-custom
+Section: python
+Priority: optional
+Maintainer: QHolmes <techwithq@outlook.com>
+Build-Depends: debhelper (>=12), libssl-dev, zlib1g-dev, libffi-dev, pkg-config, xvfb, xauth 
+Standards-Version: 4.5.0
+
+Package: python3.13-custom
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Custom build of Python 3.13
+ Compiled version of Python3.13 from source.
